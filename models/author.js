@@ -1,5 +1,6 @@
 const bookshelf = require('../database');
 const Author = bookshelf.model('Author', {
-tableName: 'author'
+tableName: 'author',
+idAttribute:'id'
 })
 module.exports = Author;

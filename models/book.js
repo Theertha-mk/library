@@ -1,11 +1,13 @@
 const bookshelf = require('../database');
+const Author = require("../models/author");
+const Genre=require("../models/genre")
 const Book = bookshelf.model('Book', {
 tableName: 'book',
 author() {
-  return this.hasMany("Author")
+  return this.hasOne("Author",)
 },
 genre() {
-    return this.hasMany("Genre")
+    return this.hasOne("Genre")
   }
   });
   

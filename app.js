@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var bookRouter = require('./routes/book1');
 var authorRouter = require('./routes/author1');
+var genreRouter = require('./routes/genre1');
 
 var app = express();
 
@@ -19,8 +20,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', bookRouter);
-app.use('/users', authorRouter);
+app.use('/book', bookRouter);
+app.use('/author', authorRouter);
+app.use('/genre', genreRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
