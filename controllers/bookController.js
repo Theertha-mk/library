@@ -1,4 +1,13 @@
 const Book = require("../models/book");
+const Author = require("../models/author");
+const Genre = require("../models/genre");
+
+
+// To get count of itemms
+exports.result = async(req,res) => {
+    const [book_count, author_count,genre_count]= await Promise.all([Book.count(), Author.count(),Genre.count()])
+    res.render('index', {book_count,author_count,genre_count});
+    };
 
 // Display list of all Books.
 exports.book_list=async(req, res, next)=> {

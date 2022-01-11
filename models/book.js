@@ -6,7 +6,7 @@ author() {
 },
 genre() {
     return this.hasMany("Genre")
-  }
-  });
-  
+  },
+ });
+
 module.exports = Book;

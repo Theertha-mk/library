@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title> library </title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+      <%-include('layout')%>
+      <p>The library has the following recording counts</p>
+      <ul>
+        <li>book count :<%=book_count %></li>
+        <li>author count :<%=author_count %></li>
+        <li>genre count :<%=genre_count %></li>
+      </ul>
   </body>
 </html>

@@ -28,9 +28,3 @@ exports.author_put=async (req, res) => {
     );
   res.json(authors);  
 }
-
-//delete author items
-// exports.author_delete= async (req, res) => {
-//   var authors = await  Author.where('id',parseInt(req.params.id)).destroy();
-//   res.json(authors);  
-// }

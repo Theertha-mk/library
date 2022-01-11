@@ -28,8 +28,3 @@ exports.genre_put=async (req, res) => {
     );
   res.json(genres);  
 }
-//delete genre items
-// exports.author_delete= async (req, res) => {
-//   var genres = await  Genre.where('id',parseInt(req.params.id)).destroy();
-//   res.json(genres);  
-// }

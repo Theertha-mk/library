@@ -6,6 +6,9 @@ var book_controller = require('../controllers/bookController');
 var author_controller = require('../controllers/authorController');
 var genre_controller = require('../controllers/genreController');
 
+// GET home page.
+router.get('/', book_controller.result); 
+
 /// BOOK ROUTES ///
 
 // display book list
